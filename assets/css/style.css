@@ -3,6 +3,7 @@
     --backgroundColor: rgb(0,0, 240, 0.6);
 }
 
+/* Universal Properties */
 * {
     color: var(--mainFontColor);
     font-family: 'Times New Roman', Times, serif;
@@ -13,11 +14,11 @@ body {
     margin: 20px;
 }
 
+/* Styling for header */
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* height: 10%; */
     margin-bottom: 20px;
 }
 
@@ -47,6 +48,21 @@ nav {
     line-height: 1.5;
 }
 
+main {
+    display: flex;
+}
+
+/* Styling for internal page navigation */
+aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 15%;
+    margin-top: 60px;
+    line-height: 1.5;
+}
+
+/* Styling for Articles */
 h2 {
     display: flex;
     flex: 100%;
@@ -65,6 +81,26 @@ h3 {
 section {
     display: flex;
     flex-wrap: wrap;
+}
+
+#firstProject {
+    display: flex;
+    flex: 100%;
+}
+
+#firstProject .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    border: 2px dashed white;
+    margin: 20px;
+    padding: 20px;
+}
+
+#firstProject p {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
 }
 
 article {
@@ -92,6 +128,7 @@ article p {
     justify-content: center;
 }
 
+/* Transitions for images */
 .project img{
     width: 225px;
     height: 150px;
@@ -103,6 +140,25 @@ article p {
     height: 200px;
 }
 
+/* link decorations */
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
+/* Styling for adjusted screen sizing */
 @media screen and (max-width: 992px) {
     article {
         display: flex;
@@ -113,6 +169,9 @@ article p {
 }
 
 @media screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
     article {
         display: flex;
         flex-wrap: wrap;
