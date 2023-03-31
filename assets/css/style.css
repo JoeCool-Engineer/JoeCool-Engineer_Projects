@@ -48,6 +48,8 @@ nav {
 }
 
 h2 {
+    display: flex;
+    flex: 100%;
     font-size: 40px;
     font-weight: bold;
 }
@@ -93,5 +95,28 @@ article p {
 .project img{
     width: 225px;
     height: 150px;
+    transition: width 4s, height 4s, transform 4s;
 }
 
+.project img:hover{
+    width: 275px;
+    height: 200px;
+}
+
+@media screen and (max-width: 992px) {
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex: 1 1 50%;      
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex: 1 1 100%;      
+    }
+}
